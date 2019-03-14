@@ -76,3 +76,18 @@ class Course(models.Model):
     objects = CourseManager()
     # .objects não fica mais o padrao do django e sim o customizado
     # Model tem o CourseManager como seu gerenciador agora
+    
+    def __str__(self):
+        '''
+        Para mostrar o nome do objeto no admin e nao o nome do tipo desse objeto
+        '''
+        return self.name
+
+    class Meta:
+        '''
+        Arrumar o nome do model
+        O django por padrão adiciona um S no final do nome
+        '''
+        verbose_name = 'Curso'
+        verbose_name_plural = 'Cursos'
+        ordering = ['name'] #-name
