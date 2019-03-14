@@ -9,26 +9,26 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
 </head>
-<body>
-<div class="content">
-    <div class="header">
-        <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
-            <a class="pure-menu-heading" href="{% url 'home' %}">ACER PAOLO</a>
-            <ul>
-                <li class="pure-menu-selected"><a href="{% url 'home' %}">Início</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="{% url 'contact' %}">Contato</a></li>
-            </ul>
-        </div>
-    </div>
+    <body>
+        <div class="content">
+            <div class="header">
+                <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+                    <a class="pure-menu-heading" href="{% url 'home' %}">ACER PAOLO</a>
+                    <ul>
+                        <li class="pure-menu-selected"><a href="{% url 'home' %}">Início</a></li>
+                        <li><a href="{% url 'courses' %}">Cursos</a></li>
+                        <li><a href="{% url 'contact' %}">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
 
-    {% block container %}
-    {% endblock %}
-        
-    <div class="footer">
-        ACER PAOLO - Uma plataforma para hackear o mundo
-    </div>
-</div>
-<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
-</body>
+            {% block container %}
+            {% endblock %}
+                
+            <div class="footer">
+                ACER PAOLO - Uma plataforma para hackear o mundo
+            </div>
+        </div>
+        <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+    </body>
 </html>
