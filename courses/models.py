@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -87,6 +86,9 @@ class Course(models.Model):
         Para mostrar o nome do objeto no admin e nao o nome do tipo desse objeto
         '''
         return self.name
+
+    def get_absolute_url(self):
+        return "/courses/%s/" % self.slug
 
     class Meta:
         '''
