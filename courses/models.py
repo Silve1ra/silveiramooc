@@ -40,10 +40,15 @@ class Course(models.Model):
     )
 
     description = models.TextField(
-        verbose_name='Descrição',
-        blank=True,
+        verbose_name='Descrição Simples',
+        blank=True
     )
     # blank=true é campo não obrigatório
+
+    about = models.TextField(
+        verbose_name='Sobre o Curso',
+        blank=True
+    )
 
     start_date = models.DateField(
         verbose_name='Data de inicio',

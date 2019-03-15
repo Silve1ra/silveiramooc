@@ -8,3 +8,10 @@ def courses(request):
         'courses':courses,
     }
     return render(request, 'courses/courses.html', context=dados)
+
+def course(request, id):
+    course = Course.objects.get(pk=id)
+    dados = {
+        'course': course,
+    }
+    return render(request, 'courses/course.html', context=dados)
